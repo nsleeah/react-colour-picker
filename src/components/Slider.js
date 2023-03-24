@@ -3,6 +3,11 @@ import ColourPickerContainer from "../containers/ColourPickerContainer";
 const Slider = ({colourName, rgbValue, onSliderMove}) => //Destructuring 
 { 
 
+    //Function Handles When Someone Changes Value
+    const handleInput = (event) => {
+        onSliderMove(event.target.value);
+    }
+
     return (
         <div className="slider">
             <label htmlFor={colourName}> 
@@ -14,7 +19,7 @@ const Slider = ({colourName, rgbValue, onSliderMove}) => //Destructuring
                 onInput={handleInput}
             />
             <p>{colourName}: {rgbValue}%</p>
-             </div>
+         </div>
     )
 }
 

@@ -16,9 +16,11 @@ const ColourPickerContainer = () => {
         const red255 = Math.ceil(red * 2.55); //Value * 255 Then Math.Ceil To Round Up.
         const green255 = Math.ceil(green * 2.55);
         const blue255 = Math.ceil(blue * 2.55);
-        setRgb(`rgb(${red255}, ${green255}, ${blue255})
-        `)
-    });
+        setRgb(`rgb(${red255}, ${green255}, ${blue255})`)
+
+    }, [red, green, blue]); //Empty Array means useEffect Fires onces and only once when page loads.
+    //Can put red in array but thats specific.
+    
     
     return (
         <>

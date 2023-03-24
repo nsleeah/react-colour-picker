@@ -1,3 +1,4 @@
+import ColourPickerContainer from "../containers/ColourPickerContainer";
 //React Component Taking in 3 Props.
 const Slider = ({colourName, rgbValue, onSliderMove}) => //Destructuring 
 { 
@@ -12,6 +13,7 @@ const Slider = ({colourName, rgbValue, onSliderMove}) => //Destructuring
                 id={colourName}
                 onInput={handleInput}
             />
+            <p>{colourName}: {rgbValue}%</p>
              </div>
     )
 }

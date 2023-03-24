@@ -1,4 +1,6 @@
 import { useState } from "react"; //More Efficient Than React
+import Slider from "../components/Slider";
+
 
 //Initialising 4 Bits of State
 const ColourPickerContainer = () => {
@@ -6,6 +8,28 @@ const ColourPickerContainer = () => {
     const [green, setGreen] = useState(50);
     const [blue, setBlue] = useState(50);
     const [rgb, setRgb] = useState("rgb(128, 128, 128");
+
+    return (
+        <>
+            <Slider
+                colourName={"Red"}
+                rgbValue={red}
+                onSliderMove={setRed}
+            />
+
+            <Slider
+                colourName={"Green"}
+                rgbValue={green}
+                onSliderMove={setGreen}
+            />
+
+            <Slider
+                colourName={"Blue"}
+                rgbValue={blue}
+                onSliderMove={setBlue}
+            />
+        </>
+    )
 
 }
 

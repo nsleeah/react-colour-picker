@@ -10,7 +10,7 @@ const Slider = ({colourName, rgbValue, onSliderMove}) => //Destructuring
             <input 
                 type="range"
                 id={colourName}
-                onInput={}
+                onInput={handleInput}
             />
              </div>
     )
